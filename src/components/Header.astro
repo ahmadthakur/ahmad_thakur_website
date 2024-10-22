@@ -1,20 +1,134 @@
+---
+// ResponsiveNav.astro
+---
 <nav>
-  <p>
-    <a href="/">home</a>
-    <a href="/writings">writings</a>
-    <a href="/projects">projects</a>
-    <a href="/now">now</a>
-    <a href="/uses">uses</a>
-  </p>
+  <div class="nav-container">
+    <p class="nav-links">
+      <a href="/">home</a>
+      <a href="/about">about</a>
+      <a href="/thoughts">thoughts</a>
+      <a href="/bookclub">book club</a>
+      <a href="https://www.youtube.com/@ahmad_thakur" target="_blank">youtube</a>
+    </p>
+    
+    <div class="burger-menu" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 </nav>
+
+<script>
+  const burgerMenu = document.querySelector('.burger-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  burgerMenu?.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    navLinks?.classList.toggle('active');
+  });
+</script>
+
 <style>
-  nav > p > a {
+  nav {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .nav-container {
+    position: relative;
+  }
+
+  nav p {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  nav p a {
     text-align: left;
     margin-left: 20px;
   }
 
-  nav {
-    margin-bottom: 4rem;
-    text-align: right;
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: currentColor;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 1rem;
+    }
+
+    .burger-menu {
+      display: flex;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 100;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff; /* Adjust based on your theme */
+      padding: 4rem 2rem 2rem;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+      z-index: 90;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin: 0;
+    }
+
+    .nav-links.active {
+      transform: translateY(0);
+    }
+
+    /* Reset margin for mobile view */
+    nav p a {
+      margin-left: 0;
+      display: block;
+      padding: 10px 0;
+    }
+
+    /* Burger menu animation */
+    .burger-menu.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+  /* Prevent transition flicker on resize */
+  @media (min-width: 769px) {
+    .nav-links {
+      position: static;
+      transform: none;
+      background: none;
+      box-shadow: none;
+      display: block;
+      padding: 0;
+    }
   }
 </style>

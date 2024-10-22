@@ -1,17 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import coverImage from "../images/cover-image.gif";
 import "../styles/global.css";
 ---
 
-<Layout title="YOUR NAME">
-  <h1>YOUR NAME</h1>
 
-  <p>
-    Lorem ipsum, dolor sit amet <strong>consectetur adipisicing</strong> elit. Minus
-    sunt porro magni, possimus repellendus maxime. Voluptate incidunt laboriosam
-    officia! Cum, ducimus cumque? Repudiandae atque nostrum perspiciatis repellat
-    sit libero. Enim <a href="/now">voluptate</a> aliquam quae sit, cum quibusdam
-    ad <a href="/uses">possimus eaque</a> delectus eos! Laborum inventore corrupti,
-    animi id recusandae delectus est nisi!
-  </p>
+
+<Layout title="Ahmad Thakur">
+  <h1>Welcome!</h1>
+  <div class="container">
+  <Image src={coverImage} alt="welcome" style={{ all: 'unset' }} class="center-image"/>
+</div>
+<p><i>Nice comes from the Latin <b>nescius</b>, meaning stupid. We do not want to be nice.</i></p>
+
+<style>
+  
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+</style>
 </Layout>

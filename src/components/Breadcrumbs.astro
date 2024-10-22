@@ -1,0 +1,123 @@
+---
+// Breadcrumbs.astro
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = Astro.url.pathname } = Astro.props;
+
+// Function to format text (capitalize, replace hyphens)
+function formatText(text: string) {
+  return text
+    .replace(/-/g, ' ')
+    
+}
+
+// Function to generate breadcrumb items
+function generateBreadcrumbs(path: string) {
+  // Remove trailing slash and split path
+  const segments = path.replace(/\/$/, '').split('/').filter(Boolean);
+  
+  // If path is empty (home page), return empty array
+  if (segments.length === 0) {
+    return [];
+  }
+  
+  // Generate breadcrumb items
+  return segments.map((segment, index) => {
+    const path = '/' + segments.slice(0, index + 1).join('/');
+    const label = formatText(segment);
+    return { path, label };
+  });
+}
+
+const breadcrumbs = generateBreadcrumbs(currentPath);
+const isHomePage = currentPath === '/';
+const showBreadcrumbs = !isHomePage;
+---
+
+{showBreadcrumbs && (
+  <nav class="breadcrumbs" aria-label="Breadcrumbs">
+    <ol>
+      <li>
+        <a href="/">home</a>
+      </li>
+      {breadcrumbs.map((crumb, index) => (
+        <li>
+          <span class="separator">/</span>
+          {index === breadcrumbs.length - 0 ? (
+            <span class="current" aria-current="page">{crumb.label}</span>
+          ) : (
+            <a href={crumb.path}>{crumb.label}</a>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<style>
+  .breadcrumbs {
+    margin: 1rem 0 2rem;
+    font-size: 0.9rem;
+  }
+
+  .breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #000;
+  }
+
+  .breadcrumbs a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumbs .current {
+    color: #000;
+    font-weight: 500;
+  }
+
+  .separator {
+    color: #999;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .breadcrumbs li {
+      color: #999;
+    }
+    .breadcrumbs .current {
+      color: #fff;
+    }
+    .separator {
+      color: #666;
+    }
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 640px) {
+    .breadcrumbs {
+      font-size: 0.85rem;
+    }
+    
+    .breadcrumbs ol {
+      gap: 0.3rem;
+    }
+  }
+</style>
