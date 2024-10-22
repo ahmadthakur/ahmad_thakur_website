@@ -9,4 +9,6 @@ const thoughts = defineCollection({
   }),
 });
 
+
+
 export const collections = { thoughts };
