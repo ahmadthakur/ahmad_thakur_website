@@ -3,18 +3,19 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Layout from "../../layouts/Layout.astro";
 
-const posts = (await getCollection("thoughts")).sort(
+const posts = (await getCollection("writings")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
 ---
 
-<Layout title="Thoughts">
+<Layout title="Writings">
   <main>
-    <h1>Some Random Thoughts</h1>
+    <h1>Some Random Writings</h1>
     {
       posts.map((post) => (
         <div class="post-item">
-          <a href={`/thoughts/${post.slug}/`}>
+          <a href={`/writings/${post.slug}/`}>
             <h2 class="title">{post.data.title}</h2>
           </a>
           <span class="date">
