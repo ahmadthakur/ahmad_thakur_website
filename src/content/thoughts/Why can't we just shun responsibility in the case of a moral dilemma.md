@@ -1,6 +1,6 @@
 ---
 title: Why can't we just shun responsibility in the case of a moral dilemma?
-pubDate: 11-10-2024
+pubDate: 2024-10-11
 author: Ahmad Thakur
 ---
 

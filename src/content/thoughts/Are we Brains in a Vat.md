@@ -1,6 +1,6 @@
 ---
 title: Are we Brains in a Vat?
-pubDate: 12-10-2024
+pubDate: 2024-10-12
 author: Ahmad Thakur
 tags: [philosophy, thoughts]
 ---

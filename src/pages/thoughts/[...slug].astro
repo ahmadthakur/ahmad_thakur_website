@@ -20,7 +20,7 @@ const { Content } = await post.render();
 <Layout {...post.data}>
   <h1>{post.data.title}</h1>
   <p>
-    <FormattedDate date={post.data.pubDate.toLocaleString()} /> — {
+    <FormattedDate date={post.data.pubDate} /> — by {
       post.data.author
     }
   </p>

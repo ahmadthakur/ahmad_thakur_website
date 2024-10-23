@@ -1,6 +1,6 @@
 ---
 title: You Are Not Real (and Neither Is Anything Else)
-pubDate: 02-08-2024
+pubDate: 2024-08-02
 author: Ahmad Thakur
 ---
 
