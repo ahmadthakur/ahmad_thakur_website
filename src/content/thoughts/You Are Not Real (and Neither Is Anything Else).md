@@ -14,6 +14,8 @@ These memories are equally real because the events have happened. But they haven
 
 The main point of the book and this video is not about time travel, but about the nature of memory and how it shapes our sense of self. Think about it – how would you cope if you woke up tomorrow and found out your parents had been dead for 15 years, when you clearly remember having dinner with them last night? Your brain would be doing mental gymnastics trying to reconcile two conflicting realities. Which "you" is the real one?
 
+---
+
 ## The Building Blocks of Identity
 
 From this thought experiment we transition from the topic of memory to the topic of consciousness. From the moment we're born, our brains start collecting experiences, forming memories, and building the foundation of who we'll become.
@@ -29,6 +31,8 @@ This brings us to the question about the nature of consciousness itself. Some ph
 If this is true, then altering your memories - as in our time travel scenario or in cases of false memories - doesn't just change what you remember. It fundamentally changes who you are. Your personality, your fears, your aspirations - all of these are shaped by your experiences and the memories you've formed from them.
 
 So, if you went through different events and formed different memories, would you become the "you" you are now? The answer is likely no. You'd still be "you" in the sense of being the same physical person, the atoms that make your physical structure, but your personality, your beliefs, your very sense of self would be profoundly different.
+
+---
 
 ## When Reality Glitches
 
@@ -48,11 +52,15 @@ There is this image in a children's history book which always fascinated me. It 
 
 What's even more concerning is the fact that false memories can be implanted in people. There have been many cases in the past such as The Satanic Panic of the 1980s and The Case of Paul Ingram in 1988, which used Suggestive questioning, emotional trauma and suggestive therapy techniques to make people believe in things that never happened. These things had real legal implications. False memories that lead to wrongful convictions or false accusations.
 
+---
+
 ## Modern Concerns
 
 And now we have AI. Deep fakes and video generators which generate content so close to reality that it is already hard to tell what is real and what is fake. In a few years time, we won't even be able to trust the very technology we created for preserving facts.
 
 We also now have technology such as the Neuralink. While Neuralink's goals are medical and technological advancement, it's not hard to imagine how a technology that directly interfaces with the brain can be weaponized. There is potential for misuse in terms of memory manipulation.
+
+---
 
 ## The Big Questions
 
