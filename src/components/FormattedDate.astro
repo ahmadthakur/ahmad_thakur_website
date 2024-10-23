@@ -11,7 +11,7 @@ const dateFormat = (datetime: string) => {
 
   //rearrange the date number where the second digit is the month
 
-  const date = dateTime.toLocaleDateString("en-us", {
+  const date = dateTime.toLocaleString("en-us", {
     year: "numeric",
     month: "short",
     day: "numeric",
