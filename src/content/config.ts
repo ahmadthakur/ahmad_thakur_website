@@ -6,6 +6,8 @@ const thoughts = defineCollection({
     title: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
+    author: z.coerce.string(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 
