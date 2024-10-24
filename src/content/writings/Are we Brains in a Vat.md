@@ -1,5 +1,5 @@
 ---
-title: Are we Brains in a Vat?
+title: Are we brains in a vat?
 pubDate: 2024-10-12
 author: Ahmad Thakur
 ---
