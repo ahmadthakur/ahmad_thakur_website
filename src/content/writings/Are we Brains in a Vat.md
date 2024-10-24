@@ -2,7 +2,6 @@
 title: Are we Brains in a Vat?
 pubDate: 2024-10-12
 author: Ahmad Thakur
-tags: [philosophy, thoughts]
 ---
 
 Skepticism argues that knowledge does not exist because we could all be brains in a vat dreaming a reality around us. Because from the point of view of the brain, it is not aware that it is in a simulated world. Skeptics argue, that since we can't know that we are brains in a vat, therefore we can't have knowledge about anything else either. And since we can't have knowledge about anything, discussion about what **true knowledge** is, is kind of moot.
