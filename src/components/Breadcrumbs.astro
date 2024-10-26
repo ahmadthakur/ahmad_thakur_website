@@ -40,15 +40,16 @@ const showBreadcrumbs = !isHomePage;
   <nav class="breadcrumbs" aria-label="Breadcrumbs">
     <ol>
       <li>
-        <a href="/">home</a>
+        
+        <a href="/">/home</a>
       </li>
       {breadcrumbs.map((crumb, index) => (
         <li>
-          <span class="separator">/</span>
+          
           {index === breadcrumbs.length - 0 ? (
             <span class="current" aria-current="page">{crumb.label}</span>
           ) : (
-            <a href={crumb.path}>{crumb.label}</a>
+            <a href={crumb.path}>/{crumb.label}</a>
           )}
         </li>
       ))}
