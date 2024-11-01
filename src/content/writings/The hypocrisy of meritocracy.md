@@ -1,5 +1,5 @@
 ---
-title: The hypocricy of meritocracy
+title: The hypocrisy of meritocracy
 pubDate: 2024-10-31
 author: Ahmad Thakur
 ---
